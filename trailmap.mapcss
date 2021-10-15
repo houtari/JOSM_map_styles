@@ -1,0 +1,122 @@
+meta 
+{
+    title: "Trailmap";
+    description: "Trailmap JOSM Map Paint Style";
+    version: "0.1_2021-10-15";
+    author: "Markku Huotari";
+}
+
+/* road classes - width */
+
+way[highway=primary],
+way[highway=secondary],
+way[highway=tertiary]
+{
+    width: 10;
+	color:  #e3e08c;
+}
+way[highway=service],
+way[highway=residential],
+way[highway=unclassified]
+{
+    width: 10;
+	color: #FFFFFF;
+}
+way[highway=cycleway][surface=paved],
+way[highway=cycleway][surface=asphalt],
+way[highway=cycleway][surface=concrete]
+{
+    width: 10;
+	color: #0679d3;
+	dashes: 25,5;
+}
+way[highway=cycleway][surface=unpaved],
+way[highway=cycleway][surface=compacted],
+way[highway=cycleway][surface=fine_gravel],
+way[highway=cycleway][surface=gravel],
+way[highway=cycleway][surface=rock]
+{
+    width: 10;
+	color: #0679d3;
+	dashes: 7,3;
+}	
+way[highway=track][mtb:scale]
+{
+    width: 10;
+}
+way[highway=footway]
+{
+    width: 8;
+}
+way[highway=path][mtb:scale]
+{
+    width: 8;
+}
+
+
+
+/* mtb:scale - colour  |  note mtb:scale = 4 to 6 still needs colour specification */
+
+way[mtb:scale=0]
+{
+	color: #5baf2f;
+	dashes: 25,5;
+	dashes-background-color: #000000;
+}
+way[mtb:scale=1]
+{
+	color: #f1ef2f;
+	dashes: 25,5;
+	dashes-background-color: #000000;
+}
+way[mtb:scale=2]
+{
+	color: #d3aa06;
+	dashes: 25,5;
+	dashes-background-color: #000000;
+}
+way[mtb:scale=3]
+{
+	color: #d30631;
+	dashes: 25,5;
+	dashes-background-color: #000000;
+}
+way[mtb:scale=4]
+{
+	color: #FF0000;
+	dashes: 25,5;
+	dashes-background-color: #000000;
+}
+way[mtb:scale=5]
+{
+	color: #FF0000;
+	dashes: 25,5;
+	dashes-background-color: #000000;
+}
+way[mtb:scale=6]
+{
+	color: #FF0000;
+	dashes: 25,5;
+	dashes-background-color: #000000;
+}
+
+
+
+/* Special access settings */
+
+way[bicycle=no]
+{
+	color: #FF0000;
+    dashes: 2,2;
+}
+way[highway=footway]
+{
+    width: 2;
+	color: #FF0000;
+	dashes: 20,5;
+}
+way[highway=footway][bicycle=yes]
+{
+	color: #0679d3;
+	dashes: 7,3;
+}
